@@ -11,7 +11,7 @@ jobs:
       #    key: ${{ secrets.GPG_KEY }}
       - name: Check Version is snapshot
         id: check_version
-        uses: thomasm-ttd/SharedWorkflows/actions/check_version@v1
+        uses: thomasm-ttd/SharedWorkflows/actions/check_version@main
         with:
           needs_snapshot: 'true'
       - name: Deploy Snapshot
