@@ -1,0 +1,11 @@
+{
+    "name": "ThomasM-ttd Build",
+    "description": "Started build workflow.",
+    "iconName": "example-icon",
+    "categories": [
+        "Java"
+    ],
+    "filePatterns": [
+        "pom.xml"
+    ]
+}
