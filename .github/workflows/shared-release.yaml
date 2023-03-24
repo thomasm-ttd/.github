@@ -5,6 +5,7 @@ on:
       release_type:
         description: The type of version number to return. Must be one of [Snapshot, Patch, Minor or Major]
         required: true
+        type: string
 
 jobs:
   build: 
