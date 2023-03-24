@@ -19,7 +19,7 @@ jobs:
 
       - name: Set version number
         id: version
-        uses: ./.github/workflows/version_number
+        uses: ./actions/version_number
         with:
           type: ${{ inputs.release_type }}
 
