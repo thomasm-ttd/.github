@@ -19,7 +19,7 @@ jobs:
 
       - name: Set version number
         id: version
-        uses: thomasm-ttd/SharedWorkflows/actions/version_number
+        uses: thomasm-ttd/SharedWorkflows/actions/version_number@main
         with:
           type: ${{ inputs.release_type }}
 
