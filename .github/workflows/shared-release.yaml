@@ -2,7 +2,7 @@ name: Shared Release Version
 on:
   workflow_call:
     inputs:
-      type:
+      release_type:
         description: The type of version number to return. Must be one of [Snapshot, Patch, Minor or Major]
         required: true
 
@@ -20,7 +20,7 @@ jobs:
         id: version
         uses: ./.github/workflows/version_number
         with:
-          type: ${{ github.event.inputs.type }}
+          type: ${{ inputs.release_type }}
 
       - name: Update pom.xml
         run: |
@@ -38,5 +38,5 @@ jobs:
           add: 'pom.xml version.json'
           author_name: Release Workflow
           author_email: unifiedid-admin+release@thetradedesk.com
-          message: 'Released ${{ github.event.inputs.type }} version: ${{ steps.version.outputs.new_version }}'
+          message: 'Released ${{ inputs.release_type }} version: ${{ steps.version.outputs.new_version }}'
 
